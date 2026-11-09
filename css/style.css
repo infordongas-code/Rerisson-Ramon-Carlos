@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #101d3a;
+  --blue: #2457d6;
+  --cyan: #52d6d0;
+  --ink: #17233d;
+  --muted: #66738b;
+  --paper: #f5f7fc;
+  --white: #fff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; }
+.container { width: min(1120px, 90%); margin: auto; }
+.topo { background: rgba(16,29,58,.97); color: white; position: sticky; top: 0; z-index: 10; }
+.nav { min-height: 76px; display: flex; justify-content: space-between; align-items: center; }
+.logo { display: inline-flex; align-items: center; gap: 10px; color: white; text-decoration: none; font-family: Manrope, sans-serif; font-weight: 800; letter-spacing: -.4px; }
+.logo span { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 11px; background: var(--cyan); color: var(--navy); font-size: 13px; }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { color: #dce5fb; text-decoration: none; font-size: 14px; transition: color .2s; }
+.nav-links a:hover { color: var(--cyan); }
+.menu-toggle { display: none; border: 0; background: transparent; color: white; font-size: 28px; cursor: pointer; }
+.hero { min-height: 540px; position: relative; overflow: hidden; display: flex; align-items: center; color: white; background: radial-gradient(circle at 82% 30%, rgba(82,214,208,.24), transparent 26%), linear-gradient(120deg, #101d3a 0%, #173c83 70%, #2457d6 100%); }
+.hero-content { position: relative; z-index: 1; padding-top: 70px; padding-bottom: 80px; }
+.eyebrow { color: var(--cyan); font-weight: 700; letter-spacing: 2.3px; font-size: 11px; margin-bottom: 15px; }
+.hero h1 { font: 800 clamp(42px, 6vw, 70px)/1.08 Manrope, sans-serif; letter-spacing: -2.8px; max-width: 750px; }
+.hero h1 span { color: var(--cyan); }
+.hero-text { color: #d9e4fa; max-width: 570px; margin: 24px 0 32px; font-size: 17px; }
+.btn { display: inline-flex; gap: 22px; align-items: center; background: var(--cyan); color: var(--navy); text-decoration: none; font-weight: 700; padding: 14px 20px; border-radius: 9px; transition: transform .2s, box-shadow .2s; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 12px 25px #07132d55; }
+.btn span { font-size: 20px; }
+.hero-decoration { position: absolute; right: 12%; top: 18%; color: #ffffff13; font-size: 300px; line-height: 1; }
+.section { padding-top: 90px; padding-bottom: 100px; }
+.section-heading { max-width: 650px; margin: 0 auto 42px; text-align: center; }
+.section-heading .eyebrow { color: var(--blue); }
+.section-heading h2 { font: 800 clamp(30px, 4vw, 42px)/1.2 Manrope, sans-serif; letter-spacing: -1.3px; margin-bottom: 12px; }
+.section-heading > p:last-child { color: var(--muted); }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
+.career-card { background: white; border: 1px solid #e7ebf4; border-radius: 18px; padding: 30px 27px; box-shadow: 0 12px 35px #162b5010; transition: transform .25s, box-shadow .25s; }
+.career-card:hover { transform: translateY(-7px); box-shadow: 0 18px 38px #162b5020; }
+.career-card.featured { border-top: 4px solid var(--blue); }
+.card-icon { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 16px; font-size: 27px; margin-bottom: 25px; }
+.operator { background: #e9efff; color: #2457d6; }
+.police { background: #e6f7f6; color: #168d8a; }
+.doctor { background: #f0eaff; color: #7950c9; }
+.number { color: #8b96aa; font-size: 10px; font-weight: 700; letter-spacing: 1.6px; }
+.career-card h3 { font: 800 21px Manrope, sans-serif; margin: 8px 0 13px; }
+.career-card p { color: var(--muted); font-size: 14px; min-height: 120px; }
+.tag { display: inline-block; margin-top: 22px; background: #f0f4fc; color: #3b568c; border-radius: 30px; padding: 7px 12px; font-size: 11px; font-weight: 700; }
+.plans { background: var(--navy); color: white; padding: 90px 0 100px; }
+.plans-inner { max-width: 900px; }
+.light .eyebrow { color: var(--cyan); }
+.light h2 { color: white; }
+.light > p:last-child { color: #b9c7e1; }
+.steps { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 45px; }
+.step { display: flex; gap: 18px; align-items: flex-start; }
+.step > span { flex: 0 0 43px; height: 43px; display: grid; place-items: center; border: 1px solid #52d6d080; color: var(--cyan); border-radius: 12px; font-weight: 700; font-size: 13px; }
+.step h3 { font: 700 17px Manrope, sans-serif; margin-bottom: 6px; }
+.step p { color: #b9c7e1; font-size: 13px; }
+.quote-section { text-align: center; padding-top: 90px; padding-bottom: 90px; }
+.quote-mark { font: 800 75px Georgia, serif; color: var(--blue); height: 58px; }
+blockquote { max-width: 760px; margin: 10px auto 18px; font: 800 clamp(24px, 4vw, 36px)/1.3 Manrope, sans-serif; letter-spacing: -1px; }
+.quote-section > p { color: var(--muted); font-size: 13px; }
+footer { background: #0b152c; color: #b9c7e1; padding: 30px 0; }
+.footer-content { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.footer-logo { margin-bottom: 8px; }
+.footer-content p { font-size: 12px; }
+.copyright { text-align: right; }
+@media (max-width: 760px) {
+  .menu-toggle { display: block; }
+  .nav { position: relative; }
+  .nav-links { display: none; position: absolute; top: 76px; left: -5.5%; width: 111%; padding: 20px 5%; background: #101d3a; flex-direction: column; gap: 16px; border-top: 1px solid #ffffff20; }
+  .nav-links.active { display: flex; }
+  .hero { min-height: 500px; }
+  .hero h1 { letter-spacing: -1.7px; }
+  .hero-decoration { right: -5%; top: 35%; font-size: 190px; }
+  .cards { grid-template-columns: 1fr; }
+  .career-card p { min-height: 0; }
+  .steps { grid-template-columns: 1fr; }
+  .section { padding-top: 70px; padding-bottom: 75px; }
+  .plans { padding: 70px 0; }
+  .footer-content { align-items: flex-start; flex-direction: column; }
+  .copyright { text-align: left; }
+}
